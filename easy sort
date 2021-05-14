@@ -1,0 +1,104 @@
+Example of easy sort in Java(Bubblesort Insertionsort Selectionsort)
+And calculate the number of exchanges, comparisons.
+
+Bubblesort
+
+public class bubblesort {
+
+	public static void main(String[] args) {
+		int[] a = {163, 128, 120, 115, 123, 94, 111, 97, 108, 101};
+		int t = 0;
+		int tauschenzahl = 0;
+		int vergleichenzahl = 0;
+		
+		for(int i = 0; i < a.length - 2; i++) {
+			for(int j = 0; j < a.length - 1 - i; j++) {
+				if(a[j] > a[j+1]) {
+					t = a[j+1];
+					a[j+1] = a[j];
+					a[j] = t;
+					tauschenzahl += 3;
+				}
+				vergleichenzahl += 1;
+			}
+		}
+		
+		for(int i = 0; i < a.length - 1; i++) {
+			System.out.print(a[i] + " ");
+		}
+		System.out.print("\n");
+		System.out.println("Zahl der Vertauschungsoperationen ist " + tauschenzahl);
+		System.out.println("Zahl der Vergleichsoperationen ist " + vergleichenzahl);
+	}
+
+}
+
+
+Insertionsort
+
+public class insertionsort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a = {163, 128, 120, 115, 123, 94, 111, 97, 108, 101};
+		int tauschenzahl = 0;
+		int vergleichenzahl = 0;
+		
+		for(int i = 1; i <= a.length - 2; i ++) {
+			int key = a[i];
+			int j = i;
+			while(j > 0 && a[j - 1] > key) {
+				a[j] = a[j-1];
+				j--;
+				tauschenzahl += 1;
+				vergleichenzahl += 1;
+			}
+			tauschenzahl += 1;
+			a[j] = key;
+		}
+		for(int i = 0; i < a.length - 1; i++) {
+			System.out.print(a[i] + " ");
+		}
+		System.out.print("\n");
+		System.out.println("Zahl der Vertauschungsoperationen ist " + tauschenzahl);
+		System.out.println("Zahl der Vergleichsoperationen ist " + vergleichenzahl);
+	}
+
+}
+
+
+Selectionsort
+public class selectionsort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a = {163, 128, 120, 115, 123, 94, 111, 97, 108, 101};
+		int t = 0;
+		int tauschenzahl = 0;
+		int vergleichenzahl = 0;
+		
+		for(int i = 0; i <= a.length - 2; i++) {
+			int min;
+			min = i;
+			for(int j = i + 1; j <= a.length - 1; j++) {
+				if(a[min] > a[j]) {
+					min = j;
+				}
+				vergleichenzahl += 1;
+			}
+			t = a[min];
+			a[min] = a[i];
+			a[i] = t;
+			tauschenzahl += 3;
+		}
+		
+		for(int i = 0; i <= a.length - 1; i++) {
+			System.out.print(a[i] + " ");
+		}
+		System.out.print("\n");
+		System.out.println("Zahl der Vertauschungsoperationen ist " + tauschenzahl);
+		System.out.println("Zahl der Vergleichsoperationen ist " + vergleichenzahl);
+	}
+
+
+}

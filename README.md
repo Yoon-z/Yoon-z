@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Yoon-z
-- 👀 I’m interested in Computer Vision
-- 🌱 I’m currently learning opencv-python
+- 👀 I’m interested in maschin-lerning
+- 🌱 I’m currently learning python
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 

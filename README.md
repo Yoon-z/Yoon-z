@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Yoon-z
+- 👋 Hi, I’m @Yz
 - 👀 I’m interested in maschin-lerning
 - 🌱 I’m currently learning python
 - 💞️ I’m looking to collaborate on ...
